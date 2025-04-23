@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a page to let you know about myself.">
+    <meta name="author" content="Bien Dranreb Gablines">
+    <title>Adventuring Into Thyself</title>
+
+    <style>
+        body {
+            background-image: url('forest.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 90%;
+            margin: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .profile-img {
+            width: 20%;
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid white;
+            display: block;
+            margin: 0 auto 20px;
+            object-fit: cover;
+        }
+
+        p {
+            font-size: normal;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        blockquote {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-left: 5px solid #ccc;
+            margin: 20px auto;
+            font-style: italic;
+            color: #f0f0f0;
+            max-width: 80%;
+        }
+
+        pre {
+            background-color: #222;
+            color: #ffffff;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: "Courier New", monospace;
+            white-space: pre-wrap;
+            max-width: 80%;
+            margin: 20px auto;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+			color: gray;
+            text-decoration: underline;
+        }
+	
+        address {
+            font-style: normal;
+            margin: 20px 0;
+        }
+
+        .poem-heading {
+            cursor: pointer; 
+            font-size: 1.5rem;
+            margin: 20px 0 10px;
+            display: flex;
+            align-items: left;
+            justify-content: center;
+        }
+
+        .poem-heading::after {
+            content: "▼"; 
+            margin-left: 10px;
+            font-size: 1rem;
+            transition: transform 0.3s ease; 
+        }
+
+        .poem-heading.active::after {
+            content: "▲"; 
+        }
+
+        .poem-container {
+            display: none;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><em>ALL ABOUT ME</em></h1>
+            <img src="bien20.jpg" alt="My Picture" class="profile-img">
+        </header>
+
+        <p>Hi, I’m Bien Dranreb Gablines, the eldest son in the family and also the first grandchild. 
+        I'm an introvert, but it depends on the bond I build with others. I don't really like heavy crowds, socializing, or interacting with people much because of how strict my grandmother was back then.
+        This made me prefer being alone and occupying myself with what I have in my room.
+        Right now, I’m a first-year college student taking up Bachelor of Science in Computer Engineering at University of Bohol. 
+        My goal in life is to succeed in my field while also figuring out what <q>happiness</q> truly means to me.</p>
+
+        <p>Growing up, I was always a curious kid, fascinated by how things worked. I love reading books, especially those that spark my interest, such as science-related books, drama, and manga, e.g., <cite>Demon Slayer</cite>.
+        I also love solving problems and getting to the root of things because I believe everything happens for a reason. 
+        My childhood wasn’t exactly easy, but I made the most of it, learned a lot along the way, and let those experiences shape who I am today.</p>
+
+        <p>Now that I’m 18 years old, I focus on improving myself, learning from past mistakes, and gaining new life experiences.  
+        I understood how cruel life can be at a young age, leading me to experience early depression. 
+        I've struggled ever since, but it hasn't stopped me from becoming the person I am today and striving to be even better.
+        One of my biggest passions is speedcubing, where I developed a deep interest in twisty puzzles.  
+        I'm proud to be part of an amazing global community, where solving these puzzles feels like free therapy.  
+        Meeting others who share the same passion is truly inspiring, especially knowing that it all started with the brilliant mind of Erno Rubik.</p>
+
+        <p>Additionally, I enjoy playing <dfn>MOBA games</dfn> like <cite>Mobile Legends: Bang Bang</cite> and <cite>Pokémon Unite</cite>.  
+        I also love solving riddles, tricky puzzles, and anything that challenges my mind.  
+        More importantly, I love helping people whenever I can, because even small acts of kindness can make <strong>a big difference.</strong></p>
+
+        <h3>As Erno Rubik once said:</h3>
+        <blockquote>
+            "If you are curious, you'll find the puzzles around you. If you are determined, you will solve them."
+        </blockquote>
+		
+		<h3>Some of My Poems</h3>
+        <!-- Poem 1 -->
+        <div class="poem-heading" onclick="togglePoem('poem1')">Abode</div>
+        <div id="poem1" class="poem-container">
+            <pre>
+Abode
+
+Home, a 4-letter word
+with a simple meaning to it.
+We can all say it's a place 
+that we like to call "the safe place."
+
+Some may say it's the people 
+who make us feel at "home,"
+others would say it's our family
+who make us feel at "home."
+
+But if you ask me, "Do I feel at home?"
+Being confused and shocked, 
+I can't really answer that
+when I myself don't feel at HOME.
+
+- byen
+            </pre>
+        </div>
+
+        <!-- Poem 2 -->
+        <div class="poem-heading" onclick="togglePoem('poem2')">Cruel</div>
+        <div id="poem2" class="poem-container">
+            <pre>
+Cruel
+
+silence too loud
+don't you hear it, too?
+within this body
+there's chaos
+
+why is that?
+aren't we supposed to enjoy "life"
+couldn't tell, but sooner or later
+we will find out
+going with the flow as always
+
+people come and go
+it takes time to get over them
+eventually, you'll recover from it
+don't forget who stayed
+
+life has to many reasons 
+to explore, to understand 
+and mostly to enjoy
+so let's discover what we call, "life"
+
+- byen
+            </pre>
+        </div>
+
+        <!-- Poem 3 -->
+        <div class="poem-heading" onclick="togglePoem('poem3')">Dark as Cold</div>
+        <div id="poem3" class="poem-container">
+            <pre>
+			
+Dark as Cold
+
+A cold evening, 
+laying down in my bed, a dark empty room 
+glarring upon the sealings, seeing pitch darkness
+couldn't help to think about how life was back then
+come to think of it, sharing our problems to others 
+was a waste of time, waste of energy
+
+but the same time, i couldn't express how happy i was 
+to let it all out, to have someone to "understand" or better to know your story
+we just can't forget about our miserable life, the traumas, the incidents nor accidents, all of those things we just can't forget
+
+so this is we call "life"?, as far as i know
+everything has a plan, a reason why it happened
+like this dark room with the coldness of the air 
+brushes through my skin, gives shivers just like how life has been these years
+can't help but to wonder, how would life been if those things never happened?
+
+- byen
+            </pre>
+        </div>
+		<h2>Contact Information:</h2>
+        <address>
+            Email: <a href="mailto:biendranreb123456@gmail.com">biendranreb123456@gmail.com</a><br>
+            Mobile No: <a href="tel:+639155193985">0915-519-3985</a><br>
+            Facebook: <a href="https://www.facebook.com/share/1ArFTnoVgp/" target="_blank">Bien Dranreb Gablines</a><br>
+        </address>
+		<h2>World Cube Assocation Profile:</h2>
+        Profile: <a href="https://www.worldcubeassociation.org/persons/2023GABL01" target="_blank">Bien Dranreb Gablines</a><br>
+    </div>
+	
+    <script>
+        function togglePoem(poemId) {
+            const poemContainer = document.getElementById(poemId);
+            const poemHeading = document.querySelector(`.poem-heading[onclick="togglePoem('${poemId}')"]`);
+
+            if (poemContainer.style.display === 'none' || poemContainer.style.display === '') {
+                poemContainer.style.display = 'block'; 
+                poemHeading.classList.add('active'); 
+            } else {
+                poemContainer.style.display = 'none';
+                poemHeading.classList.remove('active'); 
+            }
+        }
+    </script>
+</body>
+</html>

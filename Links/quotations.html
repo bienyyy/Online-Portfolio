@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quotations</title>
+  <style>
+    body {
+      background-image: url('forest.gif');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      color: #333;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .main-layout {
+      display: flex;
+      align-items: stretch; /* Stretch all children to match the container height */
+      justify-content: center;
+      gap: 60px;
+      max-width: 1400px;
+      height: 100vh;
+      margin: 0 auto; 
+    }
+
+    .vertical-title {
+      font-family: 'Berlin Sans FB Demi', cursive;
+      font-size: 2rem;
+      line-height: 1.2;
+      color: #fff;
+      text-decoration: none;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg); 
+      text-align: center;
+      letter-spacing: 20px; 
+      white-space: pre-line;
+      padding: 20px; 
+      margin: 0;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+      background-color: rgba(0, 0, 0, 0.7); 
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      top: 50%; 
+      left: 0; 
+      transform: translateY(-50%); 
+      z-index: 1000; 
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(5, auto); /* Define 5 rows */
+      grid-gap: 20px;
+      max-width: 1200px;
+    }
+
+    .quote-box {
+      background: rgba(245, 245, 220, 0.6); 
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); 
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .quote-box:hover {
+      background: rgba(245, 245, 220, 0.8); 
+      transform: scale(1.05);
+      box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3); 
+    }
+
+    .quote {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333; 
+    }
+
+    .author {
+      margin-top: 10px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: #555; 
+    }
+
+    .quote strong:first-child {
+      font-size: 2em;
+      font-family: 'Britannic Bold', cursive;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      text-transform: uppercase;
+      padding: 2px 5px; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-layout">
+    <h1 class="vertical-title">POINTS TO PONDER</h1>
+
+    <div class="grid-container">
+      <div class="quote-box">
+        <p class="quote"><strong>T</strong>o say 'I love you' one must first know how to say the 'I'.</p>
+        <p class="author">- Ayn Rand</p>
+      </div>
+
+      <div class="quote-box">
+        <p class="quote"><strong>H</strong>ow you love yourself is how you teach others to love you.</p>
+        <p class="author">- Rupi Kaur</p>
+      </div>
+
+      <div class="quote-box">
+        <p class="quote"><strong>I</strong>f everybody were like everybody else, how boring it would be.</p>
+        <p class="author">- Winnie the Pooh</p>
+      </div>
+
+      <div class="quote-box">
+        <p class="quote"><strong>W</strong>hen you're different, all you notice is the person who doesn't accept you.</p>
+        <p class="author">- Jodi Picoult</p>
+      </div>
+
+      <div class="quote-box">
+        <p class="quote"><strong>I</strong> wish to be happy, but it must be in my own way.</p>
+        <p class="author">- Jane Austen</p>
+      </div>
+
+      <div class="quote-box">
+        <p class="quote"><strong>H</strong>ating our bodies is something we learn; we can unlearn it.</p>
+        <p class="author">- B. F. Skinner</p>
+      </div>
+
+      <div class="quote-box">
+        <p class="quote"><strong>I</strong>'m a woman. Phenomenally. Phenomenal woman, that's me.</p>
+        <p class="author">- Maya Angelou</p>
+      </div>
+
+      <div class="quote-box">
+        <p class="quote"><strong>Y</strong>ou should never be surprised when someone treats you with respect.</p>
+        <p class="author">- Sarah Dessen</p>
+      </div>
+
+      <div class="quote-box">
+        <p class="quote"><strong>I</strong> really don't care what people think about me. I believe in myself.</p>
+        <p class="author">- Samantha Montgomery</p>
+      </div>
+
+      <div class="quote-box">
+        <p class="quote"><strong>A</strong>fter a while, you learn to ignore the names people call you.</p>
+        <p class="author">- Shrek</p>
+      </div>
+
+      <div class="quote-box">
+        <p class="quote"><strong>P</strong>ower. I have it. They don't. That bothers them.</p>
+        <p class="author">- Buffy</p>
+      </div>
+
+      <div class="quote-box">
+        <p class="quote"><strong>H</strong>ow you take care of yourself is how the world sees you.</p>
+        <p class="author">- Jonathan Van Ness</p>
+      </div>
+
+      <div class="quote-box">
+        <p class="quote"><strong>Y</strong>ou are not a drop in the ocean. You are the entire ocean in a drop.</p>
+        <p class="author">- Rumi</p>
+      </div>
+
+      <div class="quote-box">
+        <p class="quote"><strong>W</strong>e are all in the gutter, but some of us are looking at the stars.</p>
+        <p class="author">- Oscar Wilde</p>
+      </div>
+      
+      <div class="quote-box">
+        <p class="quote"><strong>Y</strong>ou are enough just as you are.</p>
+        <p class="author">- Bridget Jones</p>
+      </div>
+      
+      <div class="quote-box">
+        <p class="quote"><strong>I</strong>t's not what happens to you, but how you react to it that matters.</p>
+        <p class="author">- Epictetus</p>
+      </div>
+      
+      <div class="quote-box">
+        <p class="quote"><strong>Y</strong>ou are braver than you believe, stronger than you seem, and smarter than you think.</p>
+        <p class="author">- A.A. Milne</p>
+      </div>
+      
+      <div class="quote-box">
+        <p class="quote"><strong>H</strong>appiness is not something ready made. It comes from your own actions.</p>
+        <p class="author">- Dalai Lama</p>
+      </div> 
+      
+      <div class="quote-box">
+        <p class="quote"><strong>Y</strong>ou are never too old to set another goal or to dream a new dream.</p>
+        <p class="author">- C.S. Lewis</p>
+      </div>
+      
+      <div class="quote-box">
+        <p class="quote"><strong>H</strong>appiness is not a goal; it is a by-product.</p>
+        <p class="author">- Eleanor Roosevelt</p>
+      </div>    
+    </div>
+  </div>
+
+</body>
+</html>

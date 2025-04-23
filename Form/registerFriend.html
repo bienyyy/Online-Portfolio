@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration To Be My Friend</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('tree.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            backdrop-filter: blur(5px);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+        input, select, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #28a745;
+            outline: none;
+        }
+        input[type="date"] {
+            appearance: auto;
+            -webkit-appearance: auto;
+            background: white;
+            cursor: pointer;
+        }
+        textarea {
+            resize: none;
+        }
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        button {
+            cursor: pointer;
+            border: none;
+            font-size: 14px;
+            padding: 10px;
+            border-radius: 5px;
+            width: 30%;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            transform: translateY(-2px);
+        }
+        .btn-submit {
+            background-color: #28a745;
+            color: white;
+        }
+        .btn-submit:hover {
+            background-color: #218838;
+        }
+        .btn-reset {
+            background-color: #ffc107;
+            color: white;
+        }
+        .btn-reset:hover {
+            background-color: #e0a800;
+        }
+        .btn-cancel {
+            background-color: #dc3545;
+            color: white;
+        }
+        .btn-cancel:hover {
+            background-color: #c82333;
+        }
+        .other-input {
+            display: none;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Bien's Registration Form</h2>
+        <form action="submit_form.php" method="POST">
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="hobbies">Hobbies:</label>
+                <select id="hobbies" name="hobbies" onchange="toggleOtherHobby()">
+                    <option value="Reading">Reading</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Gaming">Gaming</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="text" id="other-hobby" name="other_hobby" placeholder="Specify other hobby" class="other-input">
+            </div>
+            <div class="form-group">
+                <label>Favorite Food:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="pizza" name="favorite_food" value="Pizza">
+                    <label for="pizza">Pizza</label>
+                    <input type="checkbox" id="burger" name="favorite_food" value="Burger">
+                    <label for="burger">Burger</label>
+                    <input type="checkbox" id="pasta" name="favorite_food" value="Pasta">
+                    <label for="pasta">Pasta</label>
+                    <input type="checkbox" id="other-food" name="favorite_food" value="Other" onchange="toggleOtherFood()">
+                    <label for="other-food">Other</label>
+                </div>
+                <input type="text" id="other-food-text" name="other_food" placeholder="Specify other food" class="other-input">
+            </div>
+            <div class="form-group">
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="bio" rows="2"></textarea>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="btn-submit">Submit</button>
+                <button type="reset" class="btn-reset">Clear</button>
+                <button type="button" class="btn-cancel" onclick="window.location.href='index.html';">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function toggleOtherHobby() {
+            var otherHobbyInput = document.getElementById("other-hobby");
+            otherHobbyInput.style.display = (document.getElementById("hobbies").value === "Other") ? "block" : "none";
+        }
+        function toggleOtherFood() {
+            var otherFoodInput = document.getElementById("other-food-text");
+            otherFoodInput.style.display = document.getElementById("other-food").checked ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bien Dranreb | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="hero">
+    <div class="container">
+      <h1><span id="typed"></span></h1>
+      <p data-aos="fade-up">Welcome to my Homepage where you can wittness my Projects!</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="about" data-aos="fade-up">
+    <div class="container about">
+      <img src="images/bien20.jpg" alt="Your Profile Picture" />
+      <div>
+        <h2>About Me</h2>
+        <p>I'm a Bien Dranreb Gablines who loves to learn more about programming, to achieve anything that is possible, and to live life the fullest.</p>
+        <p>Outside of School Life, I enjoy solving the rubik's cube as a hobby, solving puzzles, gaming, and learning new things in life.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" data-aos="fade-up">
+    <div class="container">
+      <h2>My Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <h3><a href="About Me/aboutme.html" target="_blank">About Me</a></h3>
+          <p>A simple website that talks About me.</p>
+        </div>
+
+        <div class="project-card">
+          <h3><a href="CV/Cvbien.html" target="_blank">Curriculum Vitae</a></h3>
+          <p>A coded Vitae.</p>
+        </div>
+
+        <div class="project-card">
+          <h3><a href="Mapping/iBelong.html" target="_blank">Mapping</a></h3>
+          <p>A simple mapping of our group photo.</p>
+      </div>
+
+        <div class="project-card">
+          <h3><a href="Links/relatedlinks.html" target="_blank">Related Links</a></h3>
+          <p>A simple site that relate our links.</p>
+        </div>
+
+        <div class="project-card">
+          <h3><a href="Links/quotations.html" target="_blank">Quotations</a></h3>
+          <p>A simple site that has quotes.</p>
+        </div>
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <address>
+      <p>If you have any questions or just want to say hi, feel free to reach out!</p>
+      <p>Email: <a href="mailto:biendranreb123456@gmail.com">biendranreb123456@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/bien-dranreb-0a74a834a/" target="_blank">Bien Dranreb</a></p>
+      <p>GitHub: <a href="https://github.com/bienyyy" target="_blank">biennyyy</a></p>
+      </address>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; Gablines, Bien Dranreb 2025</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    AOS.init();
+
+    new Typed("#typed", {
+      strings: ["Hey, I'm Bien", "I'm a 1st Year BsCpE", "From University of Bohol"],
+      typeSpeed: 60,
+      backSpeed: 30,
+      loop: true
+    });
+  </script>
+</body>
+</html>
