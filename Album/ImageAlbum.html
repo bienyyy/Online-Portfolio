@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Album Viewer</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; /* Center elements vertically */
+      text-align: center; /* Center the h1 */
+      min-height: 100vh; /* Ensure the body can expand vertically */
+      padding-bottom: 50px; /* Add some space at the bottom */
+    }
+
+    h2 {
+      color: white;
+      font-size: 2.5rem;
+      margin-bottom: 20px; /* Space between the title and the album */
+    }
+
+    .album {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 16px;
+      overflow: visible; /* allow arrows to be outside */
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .album img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      transition: opacity 0.4s ease-in-out;
+      display: block;
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 10px 16px;
+      border-radius: 50%;
+      backdrop-filter: blur(5px);
+      transition: background-color 0.3s ease;
+      z-index: 10;
+    }
+
+    .nav-btn:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .left-btn {
+      left: -80px; /* positioned further outside left of the image */
+    }
+
+    .right-btn {
+      right: -80px; /* positioned further outside right of the image */
+    }
+
+    @media (max-width: 600px) {
+      .album {
+        max-width: 90%;
+      }
+
+      .nav-btn {
+        font-size: 1.5rem;
+        padding: 8px 12px;
+      }
+
+      .left-btn {
+        left: -60px; /* adjusted for smaller screens */
+      }
+
+      .right-btn {
+        right: -60px; /* adjusted for smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>THIS IS ME!!!</h2>
+
+  <div class="album">
+    <button class="nav-btn left-btn" onclick="changeImage(-1)">⟵</button>
+    <img id="album-image" src="images/bien1.jpg" alt="Album Image">
+    <button class="nav-btn right-btn" onclick="changeImage(1)">⟶</button>
+  </div>
+
+  <script>
+    const totalImages = 20; // Number of images in your folder
+    let currentImage = 1;
+
+    function changeImage(direction) {
+      currentImage += direction;
+      if (currentImage > totalImages) currentImage = 1;
+      if (currentImage < 1) currentImage = totalImages;
+
+      const image = document.getElementById('album-image');
+      image.style.opacity = 0;
+
+      setTimeout(() => {
+        image.src = `images/bien${currentImage}.jpg`;
+        image.style.opacity = 1;
+      }, 200);
+    }
+  </script>
+
+</body>
+</html>
